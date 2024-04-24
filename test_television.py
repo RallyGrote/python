@@ -6,7 +6,7 @@ def test_init() -> None:
     tests the __init__ function in the television class
     """
     test_tv = Television()
-    assert test_tv.__str__() == 'Power = True, Channel = 0, Volume = 0'
+    assert test_tv.__str__() == 'Power = False, Channel = 0, Volume = 0'
 
 def test_power() -> None:
     """
