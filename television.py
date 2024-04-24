@@ -3,7 +3,7 @@ class Television:
     MAX_VOLUME = 2
     MIN_CHANNEL = 0
     MAX_CHANNEL = 3
-    def __init__(self):
+    def __init__(self) -> None:
         """
         Method to set default values of television object.
         """
@@ -13,7 +13,7 @@ class Television:
         self.__channel = Television.MIN_CHANNEL
         self.__mute_volume = Television.MIN_VOLUME
 
-    def power(self):
+    def power(self) -> None:
         """
         Turns the television on/off
         """
@@ -22,7 +22,7 @@ class Television:
         else:
             self.__status = True
 
-    def mute(self):
+    def mute(self) -> None:
         """
         Saves the volume then sets it to 0 if muted is false
         otherwise sets volume to the previously saved volume
@@ -38,7 +38,7 @@ class Television:
         else:
             pass
 
-    def channel_up(self):
+    def channel_up(self) -> None:
         """
         Sets the channel up one value. If called while at the maximum
         channel, sets the channel to the minimum channel
@@ -50,7 +50,7 @@ class Television:
                 self.__channel += 1
         else:
             pass
-    def channel_down(self):
+    def channel_down(self) -> None:
         """
         Sets the channel down one value. If called while at the minimum
         channel, sets the channel to the maximum channel
@@ -63,7 +63,7 @@ class Television:
         else:
             pass
 
-    def volume_up(self):
+    def volume_up(self) -> None:
         """
         Sets the volume up one value. If volume is at the maximum
         volume, then the volume is unaffected
@@ -79,7 +79,7 @@ class Television:
         else:
             pass
 
-    def volume_down(self):
+    def volume_down(self) -> None:
         """
         Sets the volume down one value. If volume is at the minimum
         volume, then the volume is unaffected
@@ -95,7 +95,7 @@ class Television:
         else:
             pass
 
-    def __str__(self):
+    def __str__(self) -> str:
         """
         Sets the layout in which a television object will be printed
         """
